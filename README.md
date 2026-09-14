@@ -345,7 +345,7 @@ The hook outputs detailed messages for each check. Run `git push` to see the val
 
 Pre-built Docker images are available for containerized use:
 
-- **Docker Hub**: `docker pull harpertoken/dotfiles:latest`
+- **Docker Hub**: `docker pull coccinella-labs/dotfiles:latest`
 - **GHCR**: `docker pull ghcr.io/dotfiles-mac/dotfiles:latest`
 
 </details>
