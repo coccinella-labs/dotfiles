@@ -77,13 +77,13 @@ Choose your preferred installation method:
 
 ### Option 2: Homebrew
 ```bash
-brew tap dotfiles-mac/dotfiles https://github.com/dotfiles-mac/dotfiles
+brew tap dotfiles-mac/dotfiles https://github.com/Coccinella-Labs/dotfiles
 brew install dotfiles
 ```
 
 ### Option 3: Manual Clone
 ```bash
-git clone https://github.com/dotfiles-mac/dotfiles.git ~/dotfiles
+git clone https://github.com/Coccinella-Labs/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./setup-mac.sh
 ```
@@ -271,7 +271,7 @@ The setup script automatically configures Git to use the hooks globally and make
 
     ```bash
     git config --global user.name "Niladri Das"
-    git config --global user.email "bniladridas@users.noreply.github.com"
+    git config --global user.email "coccinella.labs@icloud.com"
     ```
 
 5. The setup script automatically configures useful Git aliases from `.gitconfig` and lets you choose the bracket type for commit scopes.
