@@ -72,12 +72,12 @@ Choose your preferred installation method:
 
 ### Option 1: Direct Bash (Recommended)
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/dotfiles-mac/dotfiles/main/setup-mac.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coccinella-Labs/dotfiles/main/setup-mac.sh)"
 ```
 
 ### Option 2: Homebrew
 ```bash
-brew tap dotfiles-mac/dotfiles https://github.com/Coccinella-Labs/dotfiles
+brew tap Coccinella-Labs/dotfiles https://github.com/Coccinella-Labs/dotfiles
 brew install dotfiles
 ```
 
@@ -235,7 +235,7 @@ This script pulls the latest changes and copies `.gitconfig`, `.pre-commit-confi
 For a new Mac, run the setup script to install actionlint, Brev, Cocoapods, codex, Docker CLI, Flutter, GitHub CLI, GitLab CLI, Go, Homebrew, KiloCode CLI, Kimi CLI, Kiro CLI, LLVM, mole, Node.js, Ollama, opencode, Python, QEMU, Ruby, Rust, yamllint, Zsh, and configure Git hooks globally. It also offers to log in to Docker Hub:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/dotfiles-mac/dotfiles/main/setup-mac.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coccinella-Labs/dotfiles/main/setup-mac.sh)"
 ```
 
 Or download and run the script manually.
@@ -346,7 +346,7 @@ The hook outputs detailed messages for each check. Run `git push` to see the val
 Pre-built Docker images are available for containerized use:
 
 - **Docker Hub**: `docker pull coccinella-labs/dotfiles:latest`
-- **GHCR**: `docker pull ghcr.io/dotfiles-mac/dotfiles:latest`
+- **GHCR**: `docker pull ghcr.io/Coccinella-Labs/dotfiles:latest`
 
 </details>
 
