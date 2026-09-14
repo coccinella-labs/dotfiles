@@ -271,7 +271,7 @@ The setup script automatically configures Git to use the hooks globally and make
 
     ```bash
     git config --global user.name "Niladri Das"
-    git config --global user.email "coccinella.labs@icloud.com"
+    git config --global user.email "125604915+bniladridas@users.noreply.github.com"
     ```
 
 5. The setup script automatically configures useful Git aliases from `.gitconfig` and lets you choose the bracket type for commit scopes.
