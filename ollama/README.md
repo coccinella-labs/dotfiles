@@ -12,7 +12,7 @@ A Rust-based CLI tool for managing Ollama models. It fetches the latest availabl
 Clone the repository and build the tool:
 
 ```bash
-git clone https://github.com/dotfiles-mac/dotfiles.git
+git clone https://github.com/Coccinella-Labs/dotfiles.git
 cd ~/dotfiles/ollama
 cargo build --release
 ```
