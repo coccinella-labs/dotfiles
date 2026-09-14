@@ -1,7 +1,7 @@
 class Dotfiles < Formula
   desc "Developer toolkit with Mac setup, Git hooks, and CLI tools"
-  homepage "https://github.com/Coccinella-Labs/dotfiles"
-  url "https://github.com/Coccinella-Labs/dotfiles.git"
+  homepage "https://github.com/coccinella-labs/dotfiles"
+  url "https://github.com/coccinella-labs/dotfiles.git"
   version "1.0.0"
   license "MIT"
 

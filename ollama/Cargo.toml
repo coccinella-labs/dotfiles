@@ -2,12 +2,12 @@
 name = "github-dotfiles-ollama"
 version = "0.1.0"
 edition = "2021"
-authors = ["Niladri Das <bniladridas@users.noreply.github.com>"]
+authors = ["Niladri Das <125604915+bniladridas@users.noreply.github.com>"]
 description = "Rust CLI for managing Ollama models"
 license = "MIT"
-homepage = "https://github.com/Coccinella-Labs/dotfiles/tree/main/ollama"
+homepage = "https://github.com/coccinella-labs/dotfiles/tree/main/ollama"
 documentation = "https://docs.rs/github-dotfiles-ollama"
-repository = "https://github.com/Coccinella-Labs/dotfiles/tree/main/ollama"
+repository = "https://github.com/coccinella-labs/dotfiles/tree/main/ollama"
 keywords = ["ollama", "ai", "cli", "models"]
 categories = ["command-line-utilities", "api-bindings"]
 
