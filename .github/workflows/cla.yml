@@ -1,32 +1,35 @@
 ---
 name: CLA
-on:
+
+"on":
   pull_request:
     types: [opened, synchronize, reopened]
 
 jobs:
   cla:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     if: github.repository_owner == 'coccinella-labs'
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
     steps:
-      - uses: actions/checkout@v4
-        with:
-          sparse-checkout: |
-            signed.json
+      - uses: actions/checkout@v6
 
-      - name: Checkout private cla-bot
-        uses: actions/checkout@v4
-        with:
-          repository: bniladridas/cla-bot
-          token: ${{ secrets.YOUR_TOKEN_HERE }}
-          path: cla-bot
+      - name: Publish cla-signers from signed.json
+        run: cp signed.json cla-signers.json
 
-      - name: Copy signed.json to cla-signers.json
-        run: |
-          cp signed.json cla-signers.json
-          cp signed.json cla-bot/cla-signers.json
+      - name: Checkout clabot action
+        uses: actions/checkout@v6
+        with:
+          repository: coccinella-labs/clabot
+          path: clabot
+
+      - name: Install clabot dependencies
+        run: npm ci --prefix clabot
 
       - name: Run CLA bot
-        uses: ./cla-bot/
+        uses: ./clabot/
         with:
-          github-token: ${{ secrets.YOUR_TOKEN_HERE }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          cla-url: https://harpertoken.github.io/cla.html
