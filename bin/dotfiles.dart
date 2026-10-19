@@ -78,13 +78,20 @@ void updateRepo() {
 
 void restoreDotfiles() {
   print('Restoring dotfiles...');
-  final dotfiles = ['.gitconfig', '.pre-commit-config.yaml', '.yamllint'];
+  final dotfiles = [
+    'git/.gitconfig',
+    'git/.gitconfig-primary',
+    'git/.gitconfig-reviewer',
+    '.pre-commit-config.yaml',
+    '.yamllint',
+  ];
 
   for (final file in dotfiles) {
     final source = File(file);
     if (source.existsSync()) {
-      source.copySync('${Platform.environment['HOME']}/$file');
-      print('Restored $file');
+      final name = file.split('/').last;
+      source.copySync('${Platform.environment['HOME']}/$name');
+      print('Restored $name');
     }
   }
 

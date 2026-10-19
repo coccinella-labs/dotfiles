@@ -227,7 +227,7 @@ cd ~/dotfiles
 ./restore/update_and_restore.sh
 ```
 
-This script pulls the latest changes and copies `.gitconfig`, `.pre-commit-config.yaml`, and `.yamllint` to `~/`.
+This script pulls the latest changes and configures Git via `git/.gitconfig`, `git/.gitconfig-primary`, `git/.gitconfig-reviewer`, `.pre-commit-config.yaml`, and `.yamllint` to `~/`.
 
 <details>
 <summary><b>Initial Mac Setup</b></summary>
@@ -274,7 +274,7 @@ The setup script automatically configures Git to use the hooks globally and make
     git config --global user.email "125604915+bniladridas@users.noreply.github.com"
     ```
 
-5. The setup script automatically configures useful Git aliases from `.gitconfig` and lets you choose the bracket type for commit scopes.
+5. The setup script automatically configures useful Git aliases and the dual-account identities from `git/.gitconfig` and lets you choose the bracket type for commit scopes.
 
    Available aliases:
    - `git track <branch>`: Set upstream to origin/<branch>

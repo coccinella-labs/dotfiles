@@ -303,11 +303,13 @@ else
 fi
 
 echo "Setting up Git config..."
-if [ -f "$SCRIPT_DIR/.gitconfig" ]; then
-  cp "$SCRIPT_DIR/.gitconfig" ~/.gitconfig
-  echo "Git aliases configured."
+if [ -f "$SCRIPT_DIR/git/.gitconfig" ]; then
+  cp "$SCRIPT_DIR/git/.gitconfig" ~/.gitconfig
+  cp "$SCRIPT_DIR/git/.gitconfig-primary" ~/.gitconfig-primary
+  cp "$SCRIPT_DIR/git/.gitconfig-reviewer" ~/.gitconfig-reviewer
+  echo "Git aliases and dual-account identities configured."
 else
-  echo "Git config file not found; clone the repo first."
+  echo "Git config files not found; clone the repo first."
 fi
 
 echo "Setting up Git hooks..."

@@ -1,0 +1,6 @@
+# Primary account identity (committing and authoring).
+# Installed to ~/.gitconfig-primary; sudo-like overrides and manual sourcing.
+
+[user]
+  name = Niladri Das
+  email = 125604915+bniladridas@users.noreply.github.com
