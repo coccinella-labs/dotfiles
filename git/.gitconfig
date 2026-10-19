@@ -1,0 +1,35 @@
+# Git aliases and default identity.
+# Installed to ~/.gitconfig by setup-mac.sh; the includeIf rule below switches
+# the commit identity to the reviewer account for repos under ~/coccinella-admin/.
+
+[alias]
+  track = branch --set-upstream-to=origin/
+  untrack = branch --unset-upstream
+  branches = branch -a
+  status = status -sb
+  lg = log --oneline --graph --decorate
+  co = checkout
+  ci = commit
+  st = status
+
+[user]
+  name = Niladri Das
+  email = 125604915+bniladridas@users.noreply.github.com
+
+[includeIf "gitdir:~/coccinella-admin/"]
+  path = ~/.gitconfig-reviewer
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+[credential]
+  # An empty helper resets the list, dropping any system-level (osxkeychain)
+  # helper so github.com credentials follow the active `gh` account only
+  # (dual-account: `gh auth switch` decides who pushes).
+  helper =
+
+[credential "https://github.com"]
+  helper = !gh auth git-credential

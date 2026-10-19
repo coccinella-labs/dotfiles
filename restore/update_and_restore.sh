@@ -14,7 +14,7 @@ git pull
 echo "Restoring dotfiles..."
 
 # List of dotfiles to restore
-dotfiles=(".gitconfig" ".pre-commit-config.yaml" ".yamllint")
+dotfiles=("git/.gitconfig" "git/.gitconfig-primary" "git/.gitconfig-reviewer" ".pre-commit-config.yaml" ".yamllint")
 
 for file in "${dotfiles[@]}"; do
   if [ -f "$file" ]; then

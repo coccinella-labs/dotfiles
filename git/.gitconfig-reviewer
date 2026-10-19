@@ -1,0 +1,7 @@
+# Reviewer account identity (reviewing and approving).
+# Installed to ~/.gitconfig-reviewer; loaded automatically for any repo under
+# ~/coccinella-admin/ via the includeIf rule in ~/.gitconfig.
+
+[user]
+  name = coccinella-admin
+  email = 269170327+coccinella-admin@users.noreply.github.com

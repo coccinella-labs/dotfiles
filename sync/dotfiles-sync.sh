@@ -30,6 +30,8 @@ sync_push() {
 
   # Copy key dotfiles
   [ -f ~/.gitconfig ] && cp ~/.gitconfig "$BACKUP_DIR/"
+  [ -f ~/.gitconfig-primary ] && cp ~/.gitconfig-primary "$BACKUP_DIR/"
+  [ -f ~/.gitconfig-reviewer ] && cp ~/.gitconfig-reviewer "$BACKUP_DIR/"
   [ -f ~/.zshrc ] && cp ~/.zshrc "$BACKUP_DIR/"
   [ -f ~/.bashrc ] && cp ~/.bashrc "$BACKUP_DIR/"
   [ -f ~/.vimrc ] && cp ~/.vimrc "$BACKUP_DIR/"
@@ -76,12 +78,16 @@ sync_pull() {
 
     # Backup existing files
     [ -f ~/.gitconfig ] && cp ~/.gitconfig ~/.gitconfig.backup
+    [ -f ~/.gitconfig-primary ] && cp ~/.gitconfig-primary ~/.gitconfig-primary.backup
+    [ -f ~/.gitconfig-reviewer ] && cp ~/.gitconfig-reviewer ~/.gitconfig-reviewer.backup
     [ -f ~/.zshrc ] && cp ~/.zshrc ~/.zshrc.backup
     [ -f ~/.bashrc ] && cp ~/.bashrc ~/.bashrc.backup
     [ -f ~/.vimrc ] && cp ~/.vimrc ~/.vimrc.backup
 
     # Restore files
     [ -f .gitconfig ] && cp .gitconfig ~/
+    [ -f .gitconfig-primary ] && cp .gitconfig-primary ~/
+    [ -f .gitconfig-reviewer ] && cp .gitconfig-reviewer ~/
     [ -f .zshrc ] && cp .zshrc ~/
     [ -f .bashrc ] && cp .bashrc ~/
     [ -f .vimrc ] && cp .vimrc ~/
